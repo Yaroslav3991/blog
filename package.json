@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaroslav3991/blog.git"
+  },
+  "author": "Yaroslav Pereguda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yaroslav3991/blog/issues"
+  },
+  "homepage": "https://github.com/Yaroslav3991/blog#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

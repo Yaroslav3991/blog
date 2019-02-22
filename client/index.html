@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fullstack blog</title>
+</head>
+<body>
+    <h1>My blog (Express, mongoDB)</h1>
+    <div id="posts">. . .</div>
+
+    <div>
+        <a href="" data-target='createModal'>Add post(вызов модального окна)</a>
+    </div>
+
+    <div class="modal" id="createModal">
+        <h4>Создать новый пост</h4>
+        <div>
+          <input id='title' type="text" required>  
+        </div>
+        <div>
+            <textarea id='text' type="text" required></textarea>
+        </div>
+    </div>
+
+    <div>
+        <a id="createPost" href="">Создать пост</a>
+    </div>
+<script src="./index.js"></script>
+</body>
+</html>
