@@ -7,13 +7,13 @@ import "./style/style.scss";
 
 const Layout = ({ children }) => {
   let websiteTheme;
-  if (typeof window !== `undefined`) {
+  if (typeof window !== "undefined") {
     websiteTheme = window.__theme;
   }
   const [theme, setTheme] = useState(websiteTheme);
 
   useEffect(() => {
-    if (typeof window !== `undefined`) {
+    if (typeof window !== "undefined") {
       setTheme(window.__theme);
       window.__onThemeChange = () => {
         setTheme(window.__theme);

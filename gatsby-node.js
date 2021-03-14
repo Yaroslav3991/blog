@@ -9,12 +9,12 @@ const config = require("./config/siteConfig");
 exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node);
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === "MarkdownRemark") {
     const filePath = createFilePath({ node, getNode });
     const slug = `/${_.kebabCase(filePath)}`;
     createNodeField({
       node,
-      name: `slug`,
+      name: "slug",
       value: `/archives${slug}`,
     });
   }
@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const prev = index === posts.length - 1 ? null : posts[index + 1].node;
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/post.jsx`),
+      component: path.resolve("./src/templates/post.jsx"),
       context: {
         slug: node.fields.slug,
         prev,
@@ -99,7 +99,7 @@ exports.createPages = async ({ graphql, actions }) => {
     for (let i = 0; i < numPages; i += 1) {
       createPage({
         path: i === 0 ? `/tags/${_.kebabCase(tag)}` : `/tags/${_.kebabCase(tag)}/${i + 1}`,
-        component: path.resolve(`./src/templates/tag.jsx`),
+        component: path.resolve("./src/templates/tag.jsx"),
         context: {
           tag,
           limit: postsPerPage,
@@ -116,7 +116,7 @@ exports.createPages = async ({ graphql, actions }) => {
     for (let i = 0; i < numPages; i += 1) {
       createPage({
         path: i === 0 ? `/categories/${_.kebabCase(category)}` : `/categories/${_.kebabCase(category)}/${i + 1}`,
-        component: path.resolve(`./src/templates/category.jsx`),
+        component: path.resolve("./src/templates/category.jsx"),
         context: {
           category,
           limit: postsPerPage,

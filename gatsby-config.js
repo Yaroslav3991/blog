@@ -17,17 +17,17 @@ module.exports = {
     copyright: config.copyright,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          `gatsby-remark-relative-images`,
+          "gatsby-remark-relative-images",
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 680,
             },
@@ -46,13 +46,13 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-autolink-headers`,
+            resolve: "gatsby-remark-autolink-headers",
             options: {
-              className: `auto-link`,
+              className: "auto-link",
             },
           },
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: "gatsby-remark-prismjs",
             options: {
               showLineNumbers: true,
             },
@@ -61,7 +61,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: `${__dirname}/static/images`,
@@ -75,35 +75,35 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: config.siteTitle,
         short_name: config.siteTitleShort,
         description: config.siteDescription,
         start_url: config.pathPrefix === "" ? "/" : config.pathPrefix,
-        background_color: `#282c35`,
-        theme_color: `#282c35`,
-        display: `standalone`,
+        background_color: "#282c35",
+        theme_color: "#282c35",
+        display: "standalone",
         icon: config.siteLogo,
         icons: [
           {
-            src: `favicons/logo-192x192.png`,
+            src: "favicons/logo-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: `favicons/logo-512x512.png`,
+            src: "favicons/logo-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
         ],
       },
     },
-    `gatsby-plugin-offline`,
+    "gatsby-plugin-offline",
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: "gatsby-plugin-sitemap",
       options: {
-        output: `/sitemap.xml`,
+        output: "/sitemap.xml",
         query: `
           {
             site {
@@ -124,7 +124,7 @@ module.exports = {
           allSitePage.edges.map(edge => {
             return {
               url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: `daily`,
+              changefreq: "daily",
               priority: 0.7,
             };
           }),
@@ -203,7 +203,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-netlify-cms`,
+      resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
