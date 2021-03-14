@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+sitemap: https://blog.github.io.netlify.com//sitemap.xml
