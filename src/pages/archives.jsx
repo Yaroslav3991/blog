@@ -15,7 +15,9 @@ const Archives = ({ data }) => {
   let postList = [];
   Object.keys(groupedByYear).forEach((year, index) => {
     const posts = [];
-    Object.values(groupedByYear)[index].forEach(({ node }) => {
+    const values = Object.values(groupedByYear)[index];
+
+    values.forEach(({ node }) => {
       posts.push({
         date: node.frontmatter.date,
         timeToRead: node.timeToRead,
