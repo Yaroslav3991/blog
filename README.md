@@ -1,6 +1,6 @@
 # Yaroslav Pereguda blog
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/my-number/deploy-status)](https://app.netlify.com/sites/tania/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/my-number/deploy-status)](https://app.netlify.com/sites/my-name/deploys)
 
 Yaroslav's personal website running on Gatsby, React, and Node.js.
 
