@@ -11,7 +11,7 @@ const config = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
-  siteGATrackingID: "", // Tracking code ID for google analytics.
+  siteGATrackingID: "G-NRKWFT7SYK", // Tracking code ID for google analytics.
   disqusShortname: "", // Disqus shortname.
   twitterUserName: "", // twitter creator for SEO
   datePublished: "2021-01-01", // for SEO
