@@ -1,23 +1,23 @@
 /* eslint-disable no-underscore-dangle */
-import React, { useState, useContext } from 'react';
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import Helmet from 'react-helmet';
-import ThemeContext from '../../context';
-import Logo from '../../../static/favicons/logo.png';
-import Dark from '../../../static/material/moon.png';
-import Light from '../../../static/material/sun.png';
-import config from '../../../config/siteConfig';
-import './style.scss';
+import React, { useState, useContext } from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import Helmet from "react-helmet";
+import ThemeContext from "../../context";
+import Logo from "../../../static/favicons/logo.png";
+import Dark from "../../../static/material/moon.png";
+import Light from "../../../static/material/sun.png";
+import config from "../../../config/siteConfig";
+import "./style.scss";
 
 const NavList = ({ navStyle, closeMenu }) => {
-  const overflowHidden = navStyle.includes('open');
+  const overflowHidden = navStyle.includes("open");
   return (
     <nav className={navStyle}>
       {overflowHidden ? (
         <Helmet>
-          <style>{'body { overflow : hidden; }'}</style>
+          <style>{"body { overflow : hidden; }"}</style>
         </Helmet>
       ) : null}
       <ul className="nav-list">
@@ -42,17 +42,17 @@ NavList.propTypes = {
 const ThemeToggle = () => {
   const themeContext = useContext(ThemeContext);
   const themeToggle = () => {
-    window.__setPreferredTheme(themeContext.theme === 'dark' ? 'light' : 'dark');
+    window.__setPreferredTheme(themeContext.theme === "dark" ? "light" : "dark");
   };
 
   const toggleStyle = classNames({
-    'theme-toggle': true,
-    'theme-toggle--checked': themeContext.theme === 'dark',
+    "theme-toggle": true,
+    "theme-toggle--checked": themeContext.theme === "dark",
   });
   return (
     <div
       role="checkbox"
-      aria-checked={themeContext.theme === 'dark'}
+      aria-checked={themeContext.theme === "dark"}
       aria-label="theme-toggle"
       tabIndex="-1"
       className={toggleStyle}
@@ -81,14 +81,14 @@ const Header = () => {
   const [isOpenMenu, toggleOpenMenu] = useState(false);
 
   const navClass = classNames({
-    'top-nav-bar': true,
+    "top-nav-bar": true,
     open: isOpenMenu,
   });
   const mobileIcon = classNames({
     fa: true,
-    'fa-bars': !isOpenMenu,
-    'fa-times': isOpenMenu,
-    'fa-3x': true,
+    "fa-bars": !isOpenMenu,
+    "fa-times": isOpenMenu,
+    "fa-3x": true,
   });
   return (
     <header className="top-bar">

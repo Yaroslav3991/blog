@@ -1,7 +1,7 @@
-const config = require('./config/siteConfig');
+const config = require("./config/siteConfig");
 
 module.exports = {
-  pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
+  pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
     author: config.author,
     siteUrl: `${config.siteUrl}${config.pathPrefix}`,
@@ -33,14 +33,14 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-custom-blocks',
+            resolve: "gatsby-remark-custom-blocks",
             options: {
               blocks: {
                 info: {
-                  classes: 'info',
+                  classes: "info",
                 },
                 warning: {
-                  classes: 'warning',
+                  classes: "warning",
                 },
               },
             },
@@ -63,14 +63,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'images',
+        name: "images",
         path: `${__dirname}/static/images`,
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'posts',
+        name: "posts",
         path: `${__dirname}/content`,
       },
     },
@@ -80,7 +80,7 @@ module.exports = {
         name: config.siteTitle,
         short_name: config.siteTitleShort,
         description: config.siteDescription,
-        start_url: config.pathPrefix === '' ? '/' : config.pathPrefix,
+        start_url: config.pathPrefix === "" ? "/" : config.pathPrefix,
         background_color: `#282c35`,
         theme_color: `#282c35`,
         display: `standalone`,
@@ -88,13 +88,13 @@ module.exports = {
         icons: [
           {
             src: `favicons/logo-192x192.png`,
-            sizes: '192x192',
-            type: 'image/png',
+            sizes: "192x192",
+            type: "image/png",
           },
           {
             src: `favicons/logo-512x512.png`,
-            sizes: '512x512',
-            type: 'image/png',
+            sizes: "512x512",
+            type: "image/png",
           },
         ],
       },
@@ -131,13 +131,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.siteGATrackingID,
       },
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
         {
@@ -167,7 +167,7 @@ module.exports = {
                   description: edge.node.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }, { author: config.author }],
+                  custom_elements: [{ "content:encoded": edge.node.html }, { author: config.author }],
                 };
               });
             },
