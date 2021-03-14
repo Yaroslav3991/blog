@@ -105,7 +105,7 @@ $font-display: swap;
 @font-face {
   font-family: "Rubik";
   src: url("#{$font-path}/Rubik-Black.eot");
-  src: 
+  src:
     url("#{$font-path}/Rubik-Black.eot?#iefix") format("embedded-opentype"),
     url("#{$font-path}/Rubik-Black.woff2") format("woff2"),
     url("#{$font-path}/Rubik-Black.woff") format("woff"),
