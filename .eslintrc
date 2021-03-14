@@ -22,6 +22,10 @@
     "prettier"
   ],
   "rules": {
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
     /**
       * @description rules of eslint-plugin-react
       */
@@ -41,8 +45,7 @@
       {
         "singleQuote": false,
         "printWidth": 120,
-        "trailingComma": "all",
-        "arrowParens": "as-needed"
+        "trailingComma": "all"
       }
     ],
     /**
