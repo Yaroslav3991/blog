@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import './style.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import "./style.scss";
 
 const postShortList = ({ data }) => {
   return (

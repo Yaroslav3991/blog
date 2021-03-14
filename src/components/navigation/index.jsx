@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header from '../header';
-import Footer from '../footer';
-import ScrollToTop from '../scrollToTop';
+import React from "react";
+import PropTypes from "prop-types";
+import Header from "../header";
+import Footer from "../footer";
+import ScrollToTop from "../scrollToTop";
 
 const Navigation = ({ children }) => {
   return (

@@ -1,10 +1,10 @@
 const path = require(`path`);
-const _ = require('lodash');
+const _ = require("lodash");
 
-const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
-const config = require('./config/siteConfig');
+const config = require("./config/siteConfig");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node);
@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions }) => {
   for (let i = 0; i < numPages; i += 1) {
     createPage({
       path: i === 0 ? `/` : `/${i + 1}`,
-      component: path.resolve('./src/templates/postList.jsx'),
+      component: path.resolve("./src/templates/postList.jsx"),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,

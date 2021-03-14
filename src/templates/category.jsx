@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import _ from 'lodash';
-import Layout from '../layout';
-import SEO from '../components/SEO';
-import PostCardList from '../components/postCardList';
-import PostPagination from '../components/postPagination';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import _ from "lodash";
+import Layout from "../layout";
+import SEO from "../components/SEO";
+import PostCardList from "../components/postCardList";
+import PostPagination from "../components/postPagination";
 
 const Category = ({ pageContext, data }) => {
   const postEdges = data.allMarkdownRemark.edges;

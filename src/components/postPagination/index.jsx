@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import './style.scss';
-import { isNumber } from 'util';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import "./style.scss";
+import { isNumber } from "util";
 
 // https://gist.github.com/kottenator/9d936eb3e4e3c3e02598
 function pagination(currentPage, pageCount, delta = 2) {
@@ -12,7 +12,7 @@ function pagination(currentPage, pageCount, delta = 2) {
       0: [],
       1: [b],
       2: [a + 1, b],
-    }[b - a] || ['...', b]),
+    }[b - a] || ["...", b]),
   ];
 
   return Array(delta * 2 + 1)
@@ -30,7 +30,7 @@ function pagination(currentPage, pageCount, delta = 2) {
 const PostPagination = ({ currentPage, numPages, subpath }) => {
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? '/' : `/${(currentPage - 1).toString()}`;
+  const prevPage = currentPage - 1 === 1 ? "/" : `/${(currentPage - 1).toString()}`;
   const nextPage = `/${(currentPage + 1).toString()}`;
   const pages = pagination(currentPage, numPages);
   return (
@@ -46,7 +46,7 @@ const PostPagination = ({ currentPage, numPages, subpath }) => {
           isNumber(page) ? (
             <Link
               key={`pagination-number${page}`}
-              to={`${subpath}${page === 1 ? '' : `/${page}`}`}
+              to={`${subpath}${page === 1 ? "" : `/${page}`}`}
               activeClassName="active"
             >
               {page}
@@ -73,7 +73,7 @@ PostPagination.propTypes = {
 };
 
 PostPagination.defaultProps = {
-  subpath: '',
+  subpath: "",
 };
 
 export default PostPagination;

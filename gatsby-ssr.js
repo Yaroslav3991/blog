@@ -1,8 +1,8 @@
-const React = require('react');
+const React = require("react");
 
 exports.onRenderBody = ({ setPreBodyComponents }) => {
   setPreBodyComponents([
-    React.createElement('script', {
+    React.createElement("script", {
       dangerouslySetInnerHTML: {
         __html: `
           (() => {    
@@ -16,22 +16,22 @@ exports.onRenderBody = ({ setPreBodyComponents }) => {
 
             let preferredTheme
             try {
-              preferredTheme = localStorage.getItem('theme')
+              preferredTheme = localStorage.getItem("theme")
             } catch (err) {}
 
             window.__setPreferredTheme = newTheme => {
               setTheme(newTheme)
               try {
-                localStorage.setItem('theme', newTheme)
+                localStorage.setItem("theme", newTheme)
               } catch (err) {}
             }
 
-            let darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+            let darkQuery = window.matchMedia("(prefers-color-scheme: dark)")
             darkQuery.addListener(e => {
-              window.__setPreferredTheme(e.matches ? 'light' : 'dark')
+              window.__setPreferredTheme(e.matches ? "light" : "dark")
             })
 
-            setTheme(preferredTheme || (darkQuery.matches ? 'light' : 'dark'))
+            setTheme(preferredTheme || (darkQuery.matches ? "light" : "dark"))
           })()
         `,
       },

@@ -10,7 +10,7 @@ tags:
 ## Hello
 ```python
 def main():
-    print('Hello World')
+    print("Hello World")
 ```
 Увидимся позже!
 Проверка 1, 2, 3!😁

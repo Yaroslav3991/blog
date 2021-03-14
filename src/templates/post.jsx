@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import 'prismjs/themes/prism-tomorrow.css';
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
-import loadable from '@loadable/component';
-import Layout from '../layout';
-import PostText from '../components/postText';
-import PostTags from '../components/postTags';
-import SEO from '../components/SEO';
-import { useIsMobile } from '../components/utils';
-import './post.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import "prismjs/themes/prism-tomorrow.css";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import loadable from "@loadable/component";
+import Layout from "../layout";
+import PostText from "../components/postText";
+import PostTags from "../components/postTags";
+import SEO from "../components/SEO";
+import { useIsMobile } from "../components/utils";
+import "./post.scss";
 
 const PostPrevNext = ({ prev, next }) => {
   const isMobile = useIsMobile();
@@ -22,11 +22,11 @@ const PostPrevNext = ({ prev, next }) => {
             prev
           </Link>
         ) : (
-            <Link to={prev.fields.slug} rel="prev" className="post-prev">
-              <i className="fas fa-arrow-left" />
-              {prev.frontmatter.title}
-            </Link>
-          ))}
+          <Link to={prev.fields.slug} rel="prev" className="post-prev">
+            <i className="fas fa-arrow-left" />
+            {prev.frontmatter.title}
+          </Link>
+        ))}
       {next &&
         (isMobile ? (
           <Link to={next.fields.slug} rel="next" className="mobile-post-next">
@@ -34,11 +34,11 @@ const PostPrevNext = ({ prev, next }) => {
             <i className="fas fa-arrow-right" />
           </Link>
         ) : (
-            <Link to={next.fields.slug} rel="next" className="post-next">
-              {next.frontmatter.title}
-              <i className="fas fa-arrow-right" />
-            </Link>
-          ))}
+          <Link to={next.fields.slug} rel="next" className="post-next">
+            {next.frontmatter.title}
+            <i className="fas fa-arrow-right" />
+          </Link>
+        ))}
     </div>
   );
 };
@@ -48,7 +48,7 @@ const Post = ({ data, pageContext }) => {
   const { html, excerpt, timeToRead, frontmatter } = post;
   const { title, tags, cover, date, category } = frontmatter;
   const { slug, prev, next } = pageContext;
-  const Disqus = loadable(() => import('../components/disqus'));
+  const Disqus = loadable(() => import("../components/disqus"));
   return (
     <Layout>
       <SEO title={title} description={excerpt} image={cover?.publicURL} path={slug} articleDate={date} />

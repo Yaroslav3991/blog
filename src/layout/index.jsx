@@ -1,9 +1,9 @@
 /* eslint-disable no-underscore-dangle */
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import Navigation from '../components/navigation';
-import ThemeContext from '../context';
-import './style/style.scss';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import Navigation from "../components/navigation";
+import ThemeContext from "../context";
+import "./style/style.scss";
 
 const Layout = ({ children }) => {
   let websiteTheme;

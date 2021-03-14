@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
-import _ from 'lodash';
-import Layout from '../layout/index';
-import SEO from '../components/SEO';
-import PostShortList from '../components/postShortList';
-import './categories.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql, Link } from "gatsby";
+import _ from "lodash";
+import Layout from "../layout/index";
+import SEO from "../components/SEO";
+import PostShortList from "../components/postShortList";
+import "./categories.scss";
 
 const Categories = ({ data }) => {
   const { group } = data.allMarkdownRemark;

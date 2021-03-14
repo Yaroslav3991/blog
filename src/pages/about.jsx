@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../layout';
-import yaroslav from '../../static/me.png';
-import SEO from '../components/SEO';
-import './about.scss';
+import React from "react";
+import Layout from "../layout";
+import yaroslav from "../../static/me.png";
+import SEO from "../components/SEO";
+import "./about.scss";
 
 const About = () => {
   return (
@@ -15,7 +15,7 @@ const About = () => {
             <h3>About me</h3>
             <p className="time">2021-01-01</p>
             <p>
-              I'm Yaroslav Pereguda, a software engineer.
+              I"m Yaroslav Pereguda, a software engineer.
 
               This is my spot on the web for my projects, tutorials, musings, and anything else I want to write about or show the world.
             </p>

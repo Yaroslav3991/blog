@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import Img from 'gatsby-image';
-import PostText from '../postText';
-import PostTags from '../postTags';
-import { useIsMobile } from '../utils';
-import './style.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
+import PostText from "../postText";
+import PostTags from "../postTags";
+import { useIsMobile } from "../utils";
+import "./style.scss";
 
 const PostCard = ({ data }) => {
   const isMobile = useIsMobile();

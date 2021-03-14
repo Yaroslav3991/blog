@@ -1,7 +1,7 @@
-import React from 'react';
-import _ from 'lodash';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import React from "react";
+import _ from "lodash";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
 
 const PostText = ({ head, category, date, timeToRead, wrapClass, children }) => {
   const formatDate =
@@ -16,7 +16,7 @@ const PostText = ({ head, category, date, timeToRead, wrapClass, children }) => 
           </Link>
         )}
         <span>
-          <i className="fas fa-calendar-alt" style={{ marginRight: '4px' }} />
+          <i className="fas fa-calendar-alt" style={{ marginRight: "4px" }} />
           {formatDate}
         </span>
         <span>{` • ${timeToRead} min read`}</span>
@@ -36,10 +36,10 @@ PostText.propTypes = {
 };
 
 PostText.defaultProps = {
-  head: '',
-  date: '',
+  head: "",
+  date: "",
   timeToRead: 0,
-  wrapClass: '',
+  wrapClass: "",
 };
 
 export default React.memo(PostText);

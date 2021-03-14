@@ -1,13 +1,13 @@
-import React, { useState, useContext, useEffect } from 'react';
-import Disqus from 'disqus-react';
-import PropTypes from 'prop-types';
-import ThemeContext from '../../context';
-import config from '../../../config/siteConfig';
+import React, { useState, useContext, useEffect } from "react";
+import Disqus from "disqus-react";
+import PropTypes from "prop-types";
+import ThemeContext from "../../context";
+import config from "../../../config/siteConfig";
 
 const useForceUpdateDisqus = theme => {
   const [isReady, setReady] = useState(null);
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       setTimeout(() => {
         setReady(theme);
       }, 200);

@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import PostText from '../../components/postText';
-import PostTags from '../../components/postTags';
+import React from "react";
+import PropTypes from "prop-types";
+import PostText from "../../components/postText";
+import PostTags from "../../components/postTags";
 
 export const PostTemplate = ({ category, date, title, tags, image, html }) => {
-  const DefaultTitle = 'Template Title';
+  const DefaultTitle = "Template Title";
   const DefaultDate = new Date().toISOString();
   return (
     <main className="post-preview">
@@ -12,7 +12,7 @@ export const PostTemplate = ({ category, date, title, tags, image, html }) => {
         <PostTags tags={tags} />
       </PostText>
       <hr />
-      {image && <img style={{ maxWidth: '800px', maxHeight: '400px' }} src={image} alt="preview" />}
+      {image && <img style={{ maxWidth: "800px", maxHeight: "400px" }} src={image} alt="preview" />}
       {html && <div className="markdowm-body">{html}</div>}
     </main>
   );
@@ -30,12 +30,12 @@ PostTemplate.propTypes = {
 const PostPreview = ({ entry, widgetFor }) => {
   return (
     <PostTemplate
-      html={widgetFor('body')}
-      date={entry.getIn(['data', 'date'])}
-      category={entry.getIn(['data', 'category'])}
-      tags={entry.getIn(['data', 'tags'])}
-      title={entry.getIn(['data', 'title'])}
-      image={entry.getIn(['data', 'cover'])}
+      html={widgetFor("body")}
+      date={entry.getIn(["data", "date"])}
+      category={entry.getIn(["data", "category"])}
+      tags={entry.getIn(["data", "tags"])}
+      title={entry.getIn(["data", "title"])}
+      image={entry.getIn(["data", "cover"])}
     />
   );
 };

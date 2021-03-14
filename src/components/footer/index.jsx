@@ -1,6 +1,6 @@
-import React from 'react';
-import config from '../../../config/siteConfig';
-import './style.scss';
+import React from "react";
+import config from "../../../config/siteConfig";
+import "./style.scss";
 
 const Footer = () => {
   return (

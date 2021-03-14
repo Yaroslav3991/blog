@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import Layout from '../layout';
-import PostCardList from '../components/postCardList';
-import PostPagination from '../components/postPagination';
-import SEO from '../components/SEO';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../layout";
+import PostCardList from "../components/postCardList";
+import PostPagination from "../components/postPagination";
+import SEO from "../components/SEO";
 
 const PostList = ({ data, pageContext }) => {
   const { edges } = data.allMarkdownRemark;
