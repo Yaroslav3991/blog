@@ -4,7 +4,7 @@ date: "2019-11-12"
 category: "FrontEnd"
 cover: "/images/4.webp"
 tags:
-  - vue
+    - vue
 ---
 
 # Quanto et ius coniunctis urbes
