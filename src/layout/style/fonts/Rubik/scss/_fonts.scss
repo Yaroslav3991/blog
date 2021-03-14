@@ -4,7 +4,8 @@ $font-display: swap;
 @font-face {
   font-family: "Rubik";
   src: url("#{$font-path}/Rubik-Light.eot");
-  src: url("#{$font-path}/Rubik-Light.eot?#iefix") format("embedded-opentype"),
+  src:
+    url("#{$font-path}/Rubik-Light.eot?#iefix") format("embedded-opentype"),
     url("#{$font-path}/Rubik-Light.woff2") format("woff2"),
     url("#{$font-path}/Rubik-Light.woff") format("woff"),
     url("#{$font-path}/Rubik-Light.ttf") format("truetype");
@@ -78,7 +79,8 @@ $font-display: swap;
 @font-face {
   font-family: "Rubik";
   src: url("#{$font-path}/Rubik-Bold.eot");
-  src: url("#{$font-path}/Rubik-Bold.eot?#iefix") format("embedded-opentype"),
+  src:
+    url("#{$font-path}/Rubik-Bold.eot?#iefix") format("embedded-opentype"),
     url("#{$font-path}/Rubik-Bold.woff2") format("woff2"),
     url("#{$font-path}/Rubik-Bold.woff") format("woff"),
     url("#{$font-path}/Rubik-Bold.ttf") format("truetype");
@@ -103,7 +105,8 @@ $font-display: swap;
 @font-face {
   font-family: "Rubik";
   src: url("#{$font-path}/Rubik-Black.eot");
-  src: url("#{$font-path}/Rubik-Black.eot?#iefix") format("embedded-opentype"),
+  src: 
+    url("#{$font-path}/Rubik-Black.eot?#iefix") format("embedded-opentype"),
     url("#{$font-path}/Rubik-Black.woff2") format("woff2"),
     url("#{$font-path}/Rubik-Black.woff") format("woff"),
     url("#{$font-path}/Rubik-Black.ttf") format("truetype");

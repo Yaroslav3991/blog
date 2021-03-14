@@ -234,11 +234,13 @@ $z-index: 10;
         padding: 0;
         margin-right: $spacing-large;
         transition: transform $transition-faster-easein;
+
         @include hoverScale(1.3);
 
         > i {
           color: var(--text-color);
           font-size: $base-font-size * 2;
+
           @include media-breakpoint-down($breakpoint-sm) {
             font-size: $base-font-size * 1.5;
           }
