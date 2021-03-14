@@ -6,6 +6,7 @@
 
 .page-wrap {
   @extend .container;
+
   margin-top: $spacing-xlarge;
 
   @include media-breakpoint-between($breakpoint-sm, $breakpoint-md) {
@@ -28,6 +29,7 @@
   box-shadow: 0 0 $spacing-xsmall var(--category-border);
   border-radius: $base-border-radius * 5;
   transition: all $transition-faster-easein;
+
   &:hover {
     color: var(--invert2);
     background: var(--invert1);

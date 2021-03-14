@@ -17,6 +17,7 @@
   cursor: pointer;
   transition: all $transition-slower-ease;
   border: $base-border * 0.5 solid rgba(220, 57, 88, 0.15);
+
   @include media-breakpoint-up($breakpoint-md) {
     &.to-top-active {
       bottom: $base-spacing-unit * 4.5;
